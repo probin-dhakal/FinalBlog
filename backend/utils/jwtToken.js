@@ -1,5 +1,5 @@
 export const sendToken = (user, statusCode, message, res) => {
-  const token = user.getJwtToken();
+  const token=  user.getJWTToken();
 
   // Set the token in the cookie
   res
