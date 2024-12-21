@@ -5,7 +5,7 @@ export const sendToken = (user, statusCode, message, res) => {
   res
     .status(statusCode)
     .cookie("token", token, {
-      expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+      expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Enable for HTTPS
       sameSite: "strict",
